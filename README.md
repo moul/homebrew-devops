@@ -1,4 +1,4 @@
-# homebrew-gem ![License badge][license-img]
+# homebrew-devops ![License badge][license-img]
 
 ## Overview
 
