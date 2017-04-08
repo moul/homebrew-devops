@@ -14,6 +14,6 @@ class PuppetLint < Formula
   end
 
   def install
-    system "gem", "install", name, "--version", version, "--install-dir", #{prefix}
+    system "gem", "install", name, "--version", version
   end
 end
