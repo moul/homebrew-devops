@@ -14,6 +14,6 @@ class Rubocop < Formula
   end
 
   def install
-    system "gem", "install", name, "--version", version, "--install-dir", prefix
+    system "gem", "install", name, "--version", version, "--install-dir", #{prefix}
   end
 end
