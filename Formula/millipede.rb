@@ -37,12 +37,13 @@ class Millipede < Formula
     # Language::Go.stage_deps resources, "#{buildpath}/src"
     Language::Go.stage_deps resources, buildpath/"src"
 
-    system "go", "install", "github.com/codegangsta/cli"
-    system "go", "install", "github.com/kortschak/zalgo"
-    system "go", "install", "github.com/mattn/go-colorable"
-    system "go", "install", "github.com/mgutz/ansi"
-    system "go", "install", "github.com/sirupsen/logrus"
-    system "go", "install", "golang.org/x/net/html"
+    # system "go", "get", "github.com/codegangsta/cli"
+    # system "go", "get", "github.com/kortschak/zalgo"
+    # system "go", "get", "github.com/mattn/go-colorable"
+    # system "go", "get", "github.com/mgutz/ansi"
+    # system "go", "get", "github.com/sirupsen/logrus"
+    # system "go", "get", "github.com/urfave/cli"
+    # system "go", "get", "golang.org/x/net/html"
 
     # cd("src/github.com/codegangsta/cli") { system "go", "install" }
     # cd("src/github.com/sirupsen/logrus") { system "go", "install" }
