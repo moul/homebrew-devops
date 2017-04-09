@@ -8,6 +8,8 @@ class GemAst < Formula
     system "gem",
            "install", "ast",
            "--version", "2.3.0",
-           "--user-install"
+           "--install-dir", "#{prefix}",
+           "--bindir", "#{bin}",
+           "--no-user-install"
   end
 end

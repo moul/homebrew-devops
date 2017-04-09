@@ -11,12 +11,8 @@ class GemParser < Formula
     system "gem",
            "install", "parser",
            "--version", "2.4.0.0",
-           "--bindir", "#{bin}",
-           "--user-install"
-    system "gem",
-           "install", "parser",
-           "--version", "2.4.0.0",
            "--install-dir", "#{prefix}",
-           "--bindir", "#{bin}"
+           "--bindir", "#{bin}",
+           "--no-user-install"
   end
 end
