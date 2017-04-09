@@ -1,4 +1,4 @@
-# homebrew-devops ![License badge][license-img]
+# homebrew-devops ![License badge][license-img] [![Build Status][build-img]][build-url]
 
 ## Overview
 
@@ -43,3 +43,5 @@ Feel free to contribute on GitHub.
 ```
 
 [license-img]: https://img.shields.io/badge/license-ISC-blue.svg
+[build-img]: https://travis-ci.org/rockyluke/homebrew-devops.svg?branch=master
+[build-url]: https://travis-ci.org/rockyluke/homebrew-devops
