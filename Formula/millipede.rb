@@ -13,6 +13,7 @@ class Millipede < Formula
 
   def install
     ENV["GOPATH"] = "#{buildpath}"
+    ENV["CGO_ENABLED"] = "0"
     ENV.prepend_create_path "PATH", "#{buildpath}/bin"
 
     mkdir_p "#{buildpath}/src/github.com/getmillipede"
@@ -24,7 +25,7 @@ class Millipede < Formula
   end
 
   test do
-    system "#{bin}/millipede --version"
+    system "#{bin}/millipede --help"
   end
 end
 # EOF
