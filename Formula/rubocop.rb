@@ -2,7 +2,7 @@ class Rubocop < Formula
   desc "Automatic Ruby code style checking tool. Aims to enforce the community-driven Ruby Style Guide."
   homepage "https://github.com/bbatsov/rubocop/"
   url "https://rubygems.org/gems/rubocop-0.48.1.gem"
-  sha256 "1781fa5192d1a65d241f7deb504fc147534bae3282c9160f4875f02c57dd490f"
+  sha256 "002f6b49013abdc05c68ae75433c48d3ee7f1baa70674d60bf1cc310e210fbd7"
 
   def install
     system "gem",
