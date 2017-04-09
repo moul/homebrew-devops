@@ -30,16 +30,14 @@ class Millipede < Formula
   def install
     ENV["GOPATH"] = "#{buildpath}"
     ENV.prepend_create_path "PATH", "#{buildpath}/bin"
-    # ENV["GOPATH"] = buildpath
-    # ENV.prepend_create_path "PATH", buildpath/"bin"
 
     mkdir_p "#{buildpath}/src/github.com/getmillipede"
     ln_s "#{buildpath}", "#{buildpath}/src/github.com/getmillipede/millipede-go"
     # mkdir_p buildpath/"src/github.com/getmillipede"
     # ln_s buildpath, buildpath/"src/github.com/getmillipede/millipede-go"
 
-    Language::Go.stage_deps resources, "#{buildpath}/src"
-    # Language::Go.stage_deps resources, buildpath/"src"
+    # Language::Go.stage_deps resources, "#{buildpath}/src"
+    Language::Go.stage_deps resources, buildpath/"src"
 
     cd("src/github.com/codegangsta/cli") { system "go", "install" }
     cd("src/github.com/sirupsen/logrus") { system "go", "install" }
