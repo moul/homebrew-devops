@@ -28,10 +28,10 @@ class Millipede < Formula
   end
 
   def install
-    # ENV["GOPATH"] = "#{buildpath}"
-    # ENV.prepend_create_path "PATH", "#{buildpath}/bin"
-    ENV["GOPATH"] = buildpath
-    ENV.prepend_create_path "PATH", buildpath/"bin"
+    ENV["GOPATH"] = "#{buildpath}"
+    ENV.prepend_create_path "PATH", "#{buildpath}/bin"
+    # ENV["GOPATH"] = buildpath
+    # ENV.prepend_create_path "PATH", buildpath/"bin"
 
     # mkdir_p "#{buildpath}/src/github.com/getmillipede"
     # ln_s "#{buildpath}", "#{buildpath}/src/github.com/getmillipede/millipede-go"
