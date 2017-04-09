@@ -10,7 +10,7 @@ class PuppetLint < Formula
            "--version", "2.2.1",
            "--bindir", "#{bin}",
            "--user-install",
-           "--conservative"
+           "--silent"
   end
 
   test do

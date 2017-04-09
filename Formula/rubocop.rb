@@ -6,11 +6,16 @@ class Rubocop < Formula
 
   def install
     system "gem",
+           "install", "rainbow",
+           "--version", "2.2.1",
+           "--user-install",
+           "--silent"
+    system "gem",
            "install", "rubocop",
            "--version", "0.48.1",
            "--bindir", "#{bin}",
            "--user-install",
-           "--conservative"
+           "--silent"
   end
 
   test do
