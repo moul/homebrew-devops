@@ -2,11 +2,17 @@
 
 ## Overview
 
-TODO
+Homebrew is the easiest  and most flexible way to install  the UNIX tools Apple
+didn’t include with macOS.
+
+[brew.sh](https://brew.sh/)
 
 ## Description
 
-TODO
+Devops formulae for the Homebrew package manager.
+
+* puppet-lint (gem-puppet-lint)
+* rubocop (gem-puppet-rubocop)
 
 ## Usage
 
