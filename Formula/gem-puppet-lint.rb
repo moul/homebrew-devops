@@ -23,6 +23,7 @@ class GemPuppetLint < Formula
     gem_path = "/usr/bin/gem"
     ruby_path = "/usr/bin/ruby"
 
+    ohai "Fetching puppet-lint from gem source"
     system "#{gem_path}",
            "install",
            "#{cached_download}",
