@@ -1,3 +1,5 @@
+require 'brew/gem'
+
 class Rubocop < Formula
   desc "Automatic Ruby code style checking tool."
   homepage "https://github.com/bbatsov/rubocop/"
