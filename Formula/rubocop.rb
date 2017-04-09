@@ -1,4 +1,4 @@
-require 'brew/gem'
+require 'brew/gem/cli'
 
 class Rubocop < Formula
   desc "Automatic Ruby code style checking tool."
