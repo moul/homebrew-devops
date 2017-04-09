@@ -15,6 +15,8 @@ class Rubocop < Formula
     system "gem",
            "install", "rubocop",
            "--version", "0.48.1",
+           "--no-rdoc",
+           "--no-ri",
            "--install-dir", "#{prefix}",
            "--bindir", "#{bin}",
            "--no-wrapper",
