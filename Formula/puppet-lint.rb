@@ -5,12 +5,12 @@ class PuppetLint < Formula
   sha256 "f7f191e8bcd8ff35744bd5197548d283ecc1e117e08b6a3f0e614cb306140d87"
 
   def install
+    ENV["PATH"] = "#{bin}:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
     system "gem",
            "install", "puppet-lint",
            "--version", "2.2.1",
            "--bindir", "#{bin}",
            "--user-install",
-           "--silent"
   end
 
   test do
