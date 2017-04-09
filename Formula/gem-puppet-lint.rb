@@ -37,7 +37,7 @@ class GemPuppetLint < Formula
     bin.rmtree if bin.exist?
     bin.mkpath
 
-    brew_gem_prefix = "#{prefix}" + "gems/puppet-lint-#{version}"
+    brew_gem_prefix = "#{prefix}" + "/gems/puppet-lint-#{version}"
 
     gemspec = Gem::Specification::load("#{prefix}/specifications/puppet-lint-#{version}.gemspec")
 
