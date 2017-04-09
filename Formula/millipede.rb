@@ -15,8 +15,8 @@ class Millipede < Formula
     url "https://github.com/codegangsta/cli.git"
   end
 
-  go_resource "github.com/Sirupsen/logrus" do
-    url "https://github.com/Sirupsen/logrus.git"
+  go_resource "github.com/sirupsen/logrus" do
+    url "https://github.com/sirupsen/logrus.git"
   end
 
   go_resource "github.com/kortschak/zalgo" do
@@ -40,6 +40,12 @@ class Millipede < Formula
 
     # Language::Go.stage_deps "#{resources}", "#{buildpath}/src"
     Language::Go.stage_deps resources, buildpath/"src"
+
+    cd("src/github.com/codegangsta/cli") { system "go", "install" }
+    cd("src/github.com/sirupsen/logrus") { system "go", "install" }
+    cd("src/github.com/kortschak/zalgo") { system "go", "install" }
+    cd("src/github.com/mgutz/ansi") { system "go", "install" }
+
 
     system "go", "build", "-o", "millipede", "./cmd/millipede-go"
     bin.install "millipede"
