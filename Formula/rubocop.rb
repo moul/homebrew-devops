@@ -18,6 +18,6 @@ class Rubocop < Formula
            "--install-dir", "#{prefix}",
            "--bindir", "#{bin}",
            "--no-wrapper",
-           "--no-user-install",
+           "--no-user-install"
   end
 end
