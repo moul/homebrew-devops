@@ -33,8 +33,6 @@ class Millipede < Formula
 
     mkdir_p "#{buildpath}/src/github.com/getmillipede"
     ln_s "#{buildpath}", "#{buildpath}/src/github.com/getmillipede/millipede-go"
-    # mkdir_p buildpath/"src/github.com/getmillipede"
-    # ln_s buildpath, buildpath/"src/github.com/getmillipede/millipede-go"
 
     # Language::Go.stage_deps resources, "#{buildpath}/src"
     Language::Go.stage_deps resources, buildpath/"src"
@@ -44,6 +42,7 @@ class Millipede < Formula
     cd("src/github.com/kortschak/zalgo") { system "go", "install" }
     cd("src/github.com/mgutz/ansi") { system "go", "install" }
 
+    system "go", "get", "golang.org/x/net/html"
     system "go", "build", "-o", "#{bin}/millipede", "./cmd/millipede-go"
   end
 
