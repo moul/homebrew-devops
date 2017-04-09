@@ -12,18 +12,9 @@ class GemPuppetLint < Formula
     ENV['GEM_HOME']="#{prefix}"
     ENV['GEM_PATH']="#{prefix}"
 
-    # HOMEBREW_CACHE.cd do
-    #   system "gem", "fetch", "jekyll", "--version", version
-    # end
-
-    # def cached_location
-    #   Pathname.new("#{HOMEBREW_CACHE}/puppet-lint-#{version}.gem")
-    # end
-
     gem_path = "/usr/bin/gem"
     ruby_path = "/usr/bin/ruby"
 
-    ohai "Fetching puppet-lint from gem source"
     system "#{gem_path}",
            "install",
            "#{cached_download}",
