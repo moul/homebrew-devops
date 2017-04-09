@@ -35,7 +35,7 @@ class Millipede < Formula
     url "https://github.com/urfave/cli.git"
   end
 
-  go_resource "golang.org/x/net/html" do
+  go_resource "golang.org/x/net" do
     url "https://go.googlesource.com/net.git"
   end
 
@@ -48,21 +48,15 @@ class Millipede < Formula
 
     Language::Go.stage_deps resources, buildpath/"src"
 
-    # system "go", "get", "github.com/codegangsta/cli"
-    # system "go", "get", "github.com/kortschak/zalgo"
-    # system "go", "get", "github.com/mattn/go-colorable"
-    # system "go", "get", "github.com/mgutz/ansi"
-    # system "go", "get", "github.com/sirupsen/logrus"
-    # system "go", "get", "github.com/urfave/cli"
-    # system "go", "get", "golang.org/x/net/html"
+    cd("src/github.com/codegangsta/cli") { system "go", "install" }
+    cd("src/github.com/kortschak/zalgo") { system "go", "install" }
+    cd("src/github.com/mattn/go-colorable") { system "go", "install" }
+    cd("src/github.com/mgutz/ansi") { system "go", "install" }
+    cd("src/github.com/sirupsen/logrus") { system "go", "install" }
+    cd("src/github.com/urfave/cl") { system "go", "install" }
+    cd("src/golang.org/x/net/html") { system "go", "install" }
 
-    # cd("src/github.com/codegangsta/cli") { system "go", "install" }
-    # cd("src/github.com/sirupsen/logrus") { system "go", "install" }
-    # cd("src/github.com/kortschak/zalgo") { system "go", "install" }
-    # cd("src/github.com/mgutz/ansi") { system "go", "install" }
-
-    # system "go", "build", "-o", "#{bin}/millipede", "./cmd/millipede-go"
-    system "make"
+    system "go", "build", "-o", "#{bin}/millipede", "./cmd/millipede-go"
   end
 
   test do
