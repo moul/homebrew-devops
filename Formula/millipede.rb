@@ -11,6 +11,22 @@ class Millipede < Formula
 
   depends_on "go" => :build
 
+  go_resource "github.com/codegangsta/cli" do
+    url "https://github.com/codegangsta/cli.git"
+  end
+
+  go_resource "github.com/Sirupsen/logrus" do
+    url "https://github.com/Sirupsen/logrus.git"
+  end
+
+  go_resource "github.com/kortschak/zalgo" do
+    url "https://github.com/kortschak/zalgo.git"
+  end
+
+  go_resource "github.com/mgutz/ansi" do
+    url "https://github.com/mgutz/ansi.git"
+  end
+
   def install
     # ENV["GOPATH"] = "#{buildpath}"
     # ENV.prepend_create_path "PATH", "#{buildpath}/bin"
