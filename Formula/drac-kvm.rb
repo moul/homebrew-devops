@@ -5,8 +5,10 @@ require "language/go"
 class DracKvm < Formula
   desc "A simple CLI launcher for Dell DRAC KVM sessions."
   homepage "https://github.com/PaulMaddox/drac-kvm"
-  head "https://github.com/PaulMaddox/drac-kvm.git"
+  url "https://github.com/PaulMaddox/drac-kvm"
   sha256 "90c7bd537bbd71af262bab57b2465005933915b683e9739a21957832746f5f31"
+
+  head "https://github.com/PaulMaddox/drac-kvm.git"
 
   depends_on "go" => :build
 
@@ -19,7 +21,7 @@ class DracKvm < Formula
   end
 
   test do
-    system "#{bin}/millipede --help"
+    system "#{bin}/drac-kvm --help"
   end
 end
 # EOF
