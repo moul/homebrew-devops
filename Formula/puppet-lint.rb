@@ -6,7 +6,7 @@ class PuppetLint < Formula
   head 'https://github.com/rodjek/puppet-lint', :using => :git, :tag => '2.2.1'
 
   depends_on "brew-gem"
-  depends_on "ruby"
+  # depends_on "ruby"
 
   # def initialize(*args)
   #   @name = "puppet-lint"
