@@ -33,22 +33,20 @@ class Millipede < Formula
     # ENV["GOPATH"] = buildpath
     # ENV.prepend_create_path "PATH", buildpath/"bin"
 
-    # mkdir_p "#{buildpath}/src/github.com/getmillipede"
-    # ln_s "#{buildpath}", "#{buildpath}/src/github.com/getmillipede/millipede-go"
-    mkdir_p buildpath/"src/github.com/getmillipede"
-    ln_s buildpath, buildpath/"src/github.com/getmillipede/millipede-go"
+    mkdir_p "#{buildpath}/src/github.com/getmillipede"
+    ln_s "#{buildpath}", "#{buildpath}/src/github.com/getmillipede/millipede-go"
+    # mkdir_p buildpath/"src/github.com/getmillipede"
+    # ln_s buildpath, buildpath/"src/github.com/getmillipede/millipede-go"
 
-    # Language::Go.stage_deps "#{resources}", "#{buildpath}/src"
-    Language::Go.stage_deps resources, buildpath/"src"
+    Language::Go.stage_deps "#{resources}", "#{buildpath}/src"
+    # Language::Go.stage_deps resources, buildpath/"src"
 
     cd("src/github.com/codegangsta/cli") { system "go", "install" }
     cd("src/github.com/sirupsen/logrus") { system "go", "install" }
     cd("src/github.com/kortschak/zalgo") { system "go", "install" }
     cd("src/github.com/mgutz/ansi") { system "go", "install" }
 
-
-    system "go", "build", "-o", "millipede", "./cmd/millipede-go"
-    bin.install "millipede"
+    system "go", "build", "-o", "#{bin}/millipede", "./cmd/millipede-go"
   end
 
   test do
