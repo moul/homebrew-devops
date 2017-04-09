@@ -61,7 +61,8 @@ class Millipede < Formula
     # cd("src/github.com/kortschak/zalgo") { system "go", "install" }
     # cd("src/github.com/mgutz/ansi") { system "go", "install" }
 
-    system "go", "build", "-o", "#{bin}/millipede", "./cmd/millipede-go"
+    # system "go", "build", "-o", "#{bin}/millipede", "./cmd/millipede-go"
+    system "make"
   end
 
   test do
