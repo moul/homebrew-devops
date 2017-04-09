@@ -8,7 +8,6 @@ class PuppetLint < Formula
     system "gem",
            "install", "puppet-lint",
            "--version", "2.2.1",
-           "--install-dir", "#{lib}/gems",
            "--bindir", "#{bin}",
            "--user-install"
   end
