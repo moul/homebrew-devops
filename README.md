@@ -11,9 +11,11 @@ TODO
 ## Usage
 
 ```bash
-brew install brew-gem
-brew install brew-pip
 brew tap rockyluke/devops
+```
+
+```bash
+brew install puppet-lint
 ```
 
 ## Development
