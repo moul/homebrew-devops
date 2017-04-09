@@ -13,7 +13,9 @@ install:
   - brew install rubocop
 
 script:
-  - brew doctor
+  - brew test i2cssh
+  - brew test puppet-lint
+  - brew test rubocop
 
 notifications:
   email:
