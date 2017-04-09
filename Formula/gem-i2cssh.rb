@@ -1,6 +1,6 @@
 # -*- ruby -*-
 
-class GemI2ssh < Formula
+class GemI2cssh < Formula
   desc "CsshX like cluster ssh using iTerm2 panes."
   version "2.2.0"
   homepage "https://github.com/wouterdebie/i2cssh/"
