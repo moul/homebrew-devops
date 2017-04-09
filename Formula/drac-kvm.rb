@@ -6,7 +6,7 @@ class DracKvm < Formula
   desc "A simple CLI launcher for Dell DRAC KVM sessions."
   homepage "https://github.com/PaulMaddox/drac-kvm"
   url "https://github.com/PaulMaddox/drac-kvm"
-  sha256 "90c7bd537bbd71af262bab57b2465005933915b683e9739a21957832746f5f31"
+  sha256 "748cafba9b2c8855be58546b472bf2a57301a2197fde8ecb5df7588f3298cc51"
 
   head "https://github.com/PaulMaddox/drac-kvm.git"
 
