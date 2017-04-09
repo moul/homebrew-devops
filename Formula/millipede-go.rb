@@ -2,7 +2,7 @@
 
 require "language/go"
 
-class Millipede < Formula
+class MillipedeGo < Formula
   desc "Print a beautiful millipede."
   homepage "https://github.com/getmillipede/millipede-go"
   url "https://github.com/getmillipede/millipede-go/archive/v1.2.0.tar.gz"
@@ -46,7 +46,7 @@ class Millipede < Formula
 
     Language::Go.stage_deps resources, buildpath/"src"
 
-    system "go", "build", "-o", "#{bin}/millipede", "./cmd/millipede-go"
+    system "go", "build", "-o", "#{bin}/millipede-go", "./cmd/millipede-go"
   end
 
   test do

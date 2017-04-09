@@ -13,7 +13,7 @@ Devops formulae for the Homebrew package manager including the following tools:
 
 * i2cssh ([github.com/wouterdebie/i2cssh](https://github.com/wouterdebie/i2cssh/))
 * drac-kvm ([github.com/PaulMaddox/drac-kvm](https://github.com/PaulMaddox/drac-kvm/))
-* millipede ([github.com/getmillipede/millipede-go](https://github.com/getmillipede/millipede-go/))
+* millipede-go ([github.com/getmillipede/millipede-go](https://github.com/getmillipede/millipede-go/))
 * puppet-lint ([github.com/rodjek/puppet-lint](https://github.com/rodjek/puppet-lint/))
 * rubocop ([github.com/bbatsov/rubocop](https://github.com/bbatsov/rubocop/))
 
