@@ -6,7 +6,6 @@ class Millipede < Formula
   desc "Print a beautiful millipede."
   homepage "https://github.com/getmillipede/millipede-go"
   url "https://github.com/getmillipede/millipede-go/archive/v1.2.0.tar.gz"
-  head "https://github.com/getmillipede/millipede-go.git"
   sha256 "90c7bd537bbd71af262bab57b2465005933915b683e9739a21957832746f5f31"
 
   depends_on "go" => :build
@@ -41,7 +40,6 @@ class Millipede < Formula
 
   def install
     ENV["GOPATH"] = buildpath
-    ENV.prepend_create_path "PATH", buildpath/"bin"
 
     mkdir_p buildpath/"src/github.com/getmillipede"
     ln_s buildpath, buildpath/"src/github.com/getmillipede/millipede-go"
