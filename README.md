@@ -17,10 +17,10 @@ Devops formulae for the Homebrew package manager including the following tools:
 ## Usage
 
 ```bash
+# Add tap
 brew tap rockyluke/devops
-```
 
-```bash
+# Install puppet lint
 brew install puppet-lint
 ```
 
