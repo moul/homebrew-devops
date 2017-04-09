@@ -3,7 +3,7 @@ class PuppetLint < Formula
   version "2.2.1"
   homepage "https://github.com/rodjek/puppet-lint"
   url "https://rubygems.org/gems/puppet-lint-2.2.1.gem"
-  sha256 "7ce1c247af4e20813638d393307a48dc7e221bcb81a2061f413da0bb5b79c26c"
+  sha256 "f7f191e8bcd8ff35744bd5197548d283ecc1e117e08b6a3f0e614cb306140d87"
 
   depends_on "brew-gem" => :build
 
