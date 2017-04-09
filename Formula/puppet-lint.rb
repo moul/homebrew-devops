@@ -10,7 +10,7 @@ class PuppetLint < Formula
            "install", "puppet-lint",
            "--version", "2.2.1",
            "--bindir", "#{bin}",
-           "--user-install",
+           "--user-install"
   end
 
   test do
