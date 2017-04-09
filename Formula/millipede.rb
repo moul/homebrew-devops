@@ -53,7 +53,7 @@ class Millipede < Formula
     cd("src/github.com/mattn/go-colorable") { system "go", "install" }
     cd("src/github.com/mgutz/ansi") { system "go", "install" }
     cd("src/github.com/sirupsen/logrus") { system "go", "install" }
-    cd("src/github.com/urfave/cl") { system "go", "install" }
+    cd("src/github.com/urfave/cli") { system "go", "install" }
     cd("src/golang.org/x/net/html") { system "go", "install" }
 
     system "go", "build", "-o", "#{bin}/millipede", "./cmd/millipede-go"
