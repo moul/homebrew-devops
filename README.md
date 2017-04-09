@@ -9,7 +9,7 @@ didn’t include with macOS.
 
 ## Description
 
-Devops formulae for the Homebrew package manager.
+Devops formulae for the Homebrew package manager including the following tools:
 
 * puppet-lint (gem-puppet-lint)
 * rubocop (gem-puppet-rubocop)
