@@ -3,7 +3,7 @@
 ## Overview
 
 Homebrew is the easiest  and most flexible way to install  the UNIX tools Apple
-didn’t include with macOS.
+didn't include with macOS.
 
 [brew.sh](https://brew.sh/)
 
