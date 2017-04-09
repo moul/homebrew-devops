@@ -15,7 +15,7 @@ class DracKvm < Formula
   def install
     ENV["GOPATH"] = buildpath
     mkdir_p buildpath/"src/github.com/PaulMaddox"
-    ln_s buildpath, buildpath/"src/github.com/PaulMaddox/drac-kvm"
+    ln_s buildpath, buildpath/"src/github.com/PaulMaddox/drac-kvm-kvm"
     Language::Go.stage_deps resources, buildpath/"src"
     system "go", "build", "-o", "#{bin}/drac-kvm"
   end
