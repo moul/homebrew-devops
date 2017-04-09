@@ -16,8 +16,7 @@ class PuppetLint < Formula
 
   def install
     ENV["GEM_HOME"] = #{lib}/gems
-    system "gem", "install", "puppet-lint-#{version}.gem"
-    bin.install "bin/puppet-lint"
+    system "gem", "install", "puppet-lint"
   end
 
   test do
