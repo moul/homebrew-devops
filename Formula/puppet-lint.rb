@@ -1,7 +1,7 @@
 class PuppetLint < Formula
   desc "Checks your Puppet manifests against the Puppetlabs style guide and alerts you to any discrepancies."
   homepage "https://github.com/rodjek/puppet-lint/"
-  url "https://rubygems.org/gems/puppet-lint/"
+  url "https://rubygems.org/gems/puppet-lint-2.2.1.gem"
   sha256 "f7f191e8bcd8ff35744bd5197548d283ecc1e117e08b6a3f0e614cb306140d87"
 
   def install
@@ -9,7 +9,8 @@ class PuppetLint < Formula
            "install", "puppet-lint",
            "--version", "2.2.1",
            "--install-dir", "#{lib}/gems",
-           "--bindir", "#{bin}"
+           "--bindir", "#{bin}",
+           "--user-install"
   end
 
   test do
