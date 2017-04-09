@@ -38,7 +38,7 @@ class Millipede < Formula
     # mkdir_p buildpath/"src/github.com/getmillipede"
     # ln_s buildpath, buildpath/"src/github.com/getmillipede/millipede-go"
 
-    Language::Go.stage_deps "#{resources}", "#{buildpath}/src"
+    Language::Go.stage_deps resources, "#{buildpath}/src"
     # Language::Go.stage_deps resources, buildpath/"src"
 
     cd("src/github.com/codegangsta/cli") { system "go", "install" }
