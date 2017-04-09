@@ -38,6 +38,7 @@ class Millipede < Formula
     Language::Go.stage_deps resources, buildpath/"src"
 
     system "go", "get", "github.com/codegangsta/cli"
+    system "go", "get", "github.com/getmillipede/millipede-go"
     system "go", "get", "github.com/kortschak/zalgo"
     system "go", "get", "github.com/mattn/go-colorable"
     system "go", "get", "github.com/mgutz/ansi"
