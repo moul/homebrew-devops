@@ -7,8 +7,6 @@ class GemRubocop < Formula
   url "https://rubygems.org/gems/rubocop-#{version}.gem"
   sha256 "002f6b49013abdc05c68ae75433c48d3ee7f1baa70674d60bf1cc310e210fbd7"
 
-  depends_on "brew-gem"
-
   def install
     ENV['GEM_HOME']="#{prefix}"
     ENV['GEM_PATH']="#{prefix}"

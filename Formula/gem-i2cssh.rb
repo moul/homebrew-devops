@@ -1,11 +1,11 @@
 # -*- ruby -*-
 
-class GemPuppetLint < Formula
-  desc "Checks your Puppet manifests against the Puppetlabs style guide."
-  version "2.2.1"
-  homepage "https://github.com/rodjek/puppet-lint/"
-  url "https://rubygems.org/gems/puppet-lint-#{version}.gem"
-  sha256 "f7f191e8bcd8ff35744bd5197548d283ecc1e117e08b6a3f0e614cb306140d87"
+class GemI2ssh < Formula
+  desc "CsshX like cluster ssh using iTerm2 panes."
+  version "2.2.0"
+  homepage "https://github.com/wouterdebie/i2cssh/"
+  url "https://rubygems.org/gems/i2cssh-#{version}.gem"
+  sha256 "10885270b1ec08fae0ab7a0ee3f6f8043ab7ecd7d0a4bddfa26fb5c185cb6395"
 
   def install
     ENV['GEM_HOME']="#{prefix}"
@@ -23,14 +23,14 @@ class GemPuppetLint < Formula
            "--no-wrapper",
            "--no-user-install"
 
-    raise "gem install 'puppet-lint' failed with status #{$?.exitstatus}" unless $?.success?
+    raise "gem install 'i2cssh' failed with status #{$?.exitstatus}" unless $?.success?
 
     bin.rmtree if bin.exist?
     bin.mkpath
 
-    brew_gem_prefix = "#{prefix}" + "/gems/puppet-lint-#{version}"
+    brew_gem_prefix = "#{prefix}" + "/gems/i2cssh-#{version}"
 
-    gemspec = Gem::Specification::load("#{prefix}/specifications/puppet-lint-#{version}.gemspec")
+    gemspec = Gem::Specification::load("#{prefix}/specifications/i2cssh-#{version}.gemspec")
 
     ruby_libs = Dir.glob("#{prefix}/gems/*/lib")
     gemspec.executables.each do |exe|
@@ -50,7 +50,7 @@ load "#{file}"
   end
 
   test do
-    system "#{bin}/puppet-lint --help"
+    system "#{bin}/i2cssh --help"
   end
 end
 # EOF

@@ -11,8 +11,9 @@ didn't include with macOS.
 
 Devops formulae for the Homebrew package manager including the following tools:
 
-* puppet-lint (gem-puppet-lint)
-* rubocop (gem-puppet-rubocop)
+* i2cssh [github.com/wouterdebie/i2cssh](https://github.com/wouterdebie/i2cssh/)
+* puppet-lint [github.com/rodjek/puppet-lint](https://github.com/rodjek/puppet-lint/)
+* rubocop [github.com/bbatsov/rubocop](https://github.com/bbatsov/rubocop/)
 
 ## Usage
 
@@ -20,7 +21,10 @@ Devops formulae for the Homebrew package manager including the following tools:
 # Add tap
 brew tap rockyluke/devops
 
-# Install puppet lint
+# Install i2cssh
+brew install i2cssh
+
+# Install puppet-lint
 brew install puppet-lint
 ```
 
