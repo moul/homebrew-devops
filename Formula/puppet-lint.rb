@@ -4,19 +4,15 @@ class PuppetLint < Formula
   url "https://rubygems.org/gems/puppet-lint"
   sha256 "f7f191e8bcd8ff35744bd5197548d283ecc1e117e08b6a3f0e614cb306140d87"
 
-  # depends_on "brew-gem"
-  # depends_on "ruby"
-
-  # def initialize(*args)
-  #   @name = "puppet-lint"
-  #   @version = "2.2.1"
-  #   @prefix = #{prefix}
-  #   super
-  # end
+  def initialize(*args)
+    @name = "puppet-lint"
+    @version = "2.2.1"
+    @prefix = #{lib}/gems
+  end
 
   def install
     ENV["GEM_HOME"] = #{lib}/gems
-    system "gem", "install", "puppet-lint"
+    system "gem", "install", name, "--version", version, "--install-dir", prefix
   end
 
   test do
