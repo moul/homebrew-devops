@@ -7,7 +7,7 @@ class PuppetLint < Formula
   depends_on "brew-gem"
 
   def install
-    system "brew", "gem", "install", "puppet-lint"
+    system "brew-gem", "install", "puppet-lint"
   end
 
   test do

@@ -7,7 +7,7 @@ class Rubocop < Formula
   depends_on "brew-gem"
 
   def install
-    system "brew", "gem", "install", "rubocop"
+    system "brew-gem", "install", "rubocop"
   end
 
   test do
