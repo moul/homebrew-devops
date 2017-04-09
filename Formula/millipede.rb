@@ -11,6 +11,14 @@ class Millipede < Formula
 
   depends_on "go" => :build
 
+  go_resource "github.com/codegangsta/cli"
+  go_resource "github.com/kortschak/zalgo"
+  go_resource "github.com/mattn/go-colorable"
+  go_resource "github.com/mgutz/ansi"
+  go_resource "github.com/sirupsen/logrus"
+  go_resource "github.com/urfave/cli"
+  go_resource "golang.org/x/net/html"
+
   # go_resource "github.com/codegangsta/cli" do
   #   url "https://github.com/codegangsta/cli.git"
   # end
