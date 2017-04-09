@@ -1,6 +1,6 @@
 # -*- ruby -*-
 
-class PuppetLint < Formula
+class GemPuppetLint < Formula
   desc ""
   homepage "https://github.com/rodjek/puppet-lint/"
   url "https://rubygems.org/gems/puppet-lint-2.2.1.gem"
