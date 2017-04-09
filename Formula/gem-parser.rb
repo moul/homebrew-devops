@@ -4,7 +4,7 @@ class GemParser < Formula
   url "https://rubygems.org/gems/parser-2.4.0.0.gem"
   sha256 "98a50996e8277c1215c4a193cdd3e0d44fd5810db14251b0774273a1d074198c"
 
-  depends_on "gem-ast" :install
+  depends_on "gem-ast" => :install
 
   def install
     ENV["PATH"] = "#{bin}:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
