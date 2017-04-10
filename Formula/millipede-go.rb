@@ -1,29 +1,29 @@
-# -*- ruby -*-
-
 require "language/go"
 
 class MillipedeGo < Formula
-  desc "Print a beautiful millipede."
+  desc "Print a beautiful millipede"
   homepage "https://github.com/getmillipede/millipede-go"
   url "https://github.com/getmillipede/millipede-go/archive/v1.3.0.tar.gz"
-  sha256 "643b23c486ec887bdf2d071692a4e5baecb65d5b6a70fb5c135bedaf653180ca"
+  sha256 "49d1e6ee6843b82d6b72254d00813941590ad9d4850b27a60e2fc10cfdd9c4f4"
+
+  head "https://github.com/getmillipede/millipede-go.git"
 
   depends_on "go" => :build
 
-  go_resource "github.com/codegangsta/cli" do
-    url "https://github.com/codegangsta/cli.git"
-  end
-
   def install
     ENV["GOPATH"] = buildpath
-    mkdir_p buildpath/"src/github.com/getmillipede"
-    ln_s buildpath, buildpath/"src/github.com/getmillipede/millipede-go"
-    Language::Go.stage_deps resources, buildpath/"src"
-    system "go", "build", "-o", "#{bin}/millipede-go", "./cmd/millipede-go"
+    ENV["GOBIN"] = buildpath
+    ENV["CGO_ENABLED"] = "0"
+
+    (buildpath/"src/github.com/getmillipede/millipede-go").install Dir["*"]
+
+    system "go", "build", "-o", "#{bin}/millipede-go", "-v", "github.com/getmillipede/millipede-go/cmd/millipede-go/"
+
+    # FIXME: add autocompletion
   end
 
   test do
-    system "#{bin}/millipede-go --help"
+    output = shell_output(bin/"millipede-go --version")
+    assert output.include? "millipede-go version"
   end
 end
-# EOF
