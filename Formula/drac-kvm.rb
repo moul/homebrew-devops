@@ -8,7 +8,7 @@ class DracKvm < Formula
   url "https://github.com/PaulMaddox/drac-kvm"
   sha256 "748cafba9b2c8855be58546b472bf2a57301a2197fde8ecb5df7588f3298cc51"
 
-  head "https://github.com/PaulMaddox/drac-kvm.git"
+  head "https://github.com/PaulMaddox/drac-kvm.git", :branch => "master"
 
   depends_on "go" => :build
 
