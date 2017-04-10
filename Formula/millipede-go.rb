@@ -10,9 +10,9 @@ class MillipedeGo < Formula
 
   depends_on "go" => :build
 
-  # go_resource "github.com/codegangsta/cli" do
-  #   url "https://github.com/codegangsta/cli.git"
-  # end
+  go_resource "github.com/codegangsta/cli" do
+    url "https://github.com/codegangsta/cli.git"
+  end
 
   # go_resource "github.com/kortschak/zalgo" do
   #   url "https://github.com/codegangsta/cli.git"
