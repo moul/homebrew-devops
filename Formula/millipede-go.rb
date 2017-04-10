@@ -14,30 +14,6 @@ class MillipedeGo < Formula
     url "https://github.com/codegangsta/cli.git"
   end
 
-  # go_resource "github.com/kortschak/zalgo" do
-  #   url "https://github.com/codegangsta/cli.git"
-  # end
-
-  # go_resource "github.com/mattn/go-colorable" do
-  #   url "https://github.com/mattn/go-colorable.git"
-  # end
-
-  # go_resource "github.com/mgutz/ansi" do
-  #   url "https://github.com/mgutz/ansi.git"
-  # end
-
-  # go_resource "github.com/sirupsen/logrus" do
-  #   url "https://github.com/sirupsen/logrus.git"
-  # end
-
-  # go_resource "github.com/urfave/cli" do
-  #   url "https://github.com/urfave/cli.git"
-  # end
-
-  # go_resource "golang.org/x/net" do
-  #   url "https://go.googlesource.com/net.git"
-  # end
-
   def install
     ENV["GOPATH"] = buildpath
     mkdir_p buildpath/"src/github.com/getmillipede"
@@ -47,7 +23,7 @@ class MillipedeGo < Formula
   end
 
   test do
-    system "#{bin}/millipede --help"
+    system "#{bin}/millipede-go --help"
   end
 end
 # EOF
