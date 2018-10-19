@@ -1,5 +1,7 @@
 # homebrew-devops ![License badge][license-img] [![Build Status][build-img]][build-url]
 
+[![GuardRails badge](https://badges.production.guardrails.io/moul/homebrew-devops.svg)](https://www.guardrails.io)
+
 ## Overview
 
 Homebrew is the easiest  and most flexible way to install  the UNIX tools Apple
